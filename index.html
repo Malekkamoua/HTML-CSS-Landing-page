@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <title>TOYOTA Appointement service</title>
+
+</head>
+<script>
+        $(document).ready(function() {
+          $("a").on('click', function(event) {
+              if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 900, function() {
+                window.location.hash = hash;
+              });
+            } 
+          });
+        });
+      </script>
+    
+<body>
+        <div id ="black">
+
+        <div class="navigation">
+                <div class="logo" >
+                    <img src="./logo1.png" alt="logo">
+                  </div>
+                   <ul>
+                     <li> <a href="#black">HOME</a> </li>
+                     <li> <a href="#service">APPOINTMENT</a></li>
+                     <li> <a href="#map-canvas">VISIT US</a></li>
+                   </ul>
+                </div>
+     
+        <h1>LET'S GO PLACES</h1>    
+    </div>
+    <div class="car">
+      <img src="./car.png"> </div>
+    <div class="red"> 
+    <div></div>
+
+
+        <p class="text1">
+ In most cases, Toyota recommends that Toyota owners schedule a service appointment every six months or 5000 miles, whichever comes first. The maintenance performed 
+ during each service appointment varies by vehicle model and year, driving conditions and other factors that our trained
+ technicians evaluate. However, recommended 
+ maintenance often includes services such as tire rotation,oil change and inspection of wiper blades, brake pads and fluid levels.
+ We created this online service to help you gain your time while booking an appointement online with simply filling
+the form presented down.
+        </p>
+    </div>
+
+<div class="part2">
+
+<div id="service">
+    <h2>Are you due for a service appointment ?</h2>
+    <p class="text2">
+Fill the form on your right with the needed information and you will receive an email with your fixed service appointment </p>
+</div>
+
+<form>
+    
+        <div class="group">      
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Name</label>
+        </div>
+          
+        <div class="group">      
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Email</label>
+        </div>
+
+        <div class="group">      
+                <input type="password" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Password</label>
+              </div>
+
+              <div class="group">      
+                    <input type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Enter car name</label>
+                  </div>
+                  <div class="group">      
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Enter year</label>
+                      </div>
+                <input type="submit" value="Submit" class="btn">
+      </form>
+
+</div>
+<div class="logob" >
+        <img src="./logo1.png" alt="logo">
+      </div>
+<div class="gray">
+    <p class="text3">
+            Toyota Motor Corporation is a Japanese multinational automotive
+            manufacturer headquartered in Toyota, Aichi, Japan. In 2017, 
+            Toyota's corporate structure consisted of 364,445 employees 
+            worldwide[5] and, as of September 2018, was the sixth-largest 
+            company in the world by revenue. As of 2017, Toyota is the 
+            world's second-largest automotive manufacturer. 
+    </p>
+    <div id="map-canvas"></div>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
+         
+</div>
+<footer>
+<div class="footer">
+       <p > TOYOTA&copy;2018 </p>
+        </div>
+    </footer>
+
+</body>
+<script>
+ // if HTML DOM Element that contains the map is found...
+if (document.getElementById('map-canvas')){
+ 
+    // Coordinates to center the map
+    var myLatlng = new google.maps.LatLng(36.862499,10.195556);
+ 
+    // Other options for the map, pretty much selfexplanatory
+    var mapOptions = {
+        zoom: 14,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+ 
+    // Attach a map to the DOM Element, with the defined settings
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+}</script>
+</html>
